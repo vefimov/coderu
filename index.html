@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>Chess</title>	
+
+			<style type="text/css">
+
+				body{
+					margin: 0;
+					padding: 0;
+					}
+
+				table{
+					position: absolute;
+            		left: 50%;
+            		top:50%;
+            		margin-left: -255px;
+            		margin-top: -255px;
+					}
+		
+				td{
+					width:50px;
+					height:50px;
+
+					}
+
+				tr:nth-child(odd) td:nth-child(even),
+				tr:nth-child(even) td:nth-child(odd){
+					background: black;
+					}
+
+				tr:first-child td,
+				td:first-child,
+				tr:last-child td,/*Так и не смог нормально разобраться,
+									как работают эти строки "tr:last-child td", понял что td
+									в конце помогает заполнить всю строку,но никакой инфы не нашел по этому поводу.Почему у нас не закрашиваются все ячейки если мы уже выбрали tr полностью и поставили приоритет цвета?*/
+				td:last-child{
+					background: grey !important;
+					font-size: 30px;
+					text-align: center;
+					}
+
+				div{
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					background: yellow;
+					margin:0 auto;
+					}
+		
+
+			</style>
+
+		</head>
+
+	<body>
+		<table  border="1" cellspacing="0" cellpadding="0">
+
+		<tr>
+			<td></td>
+			<td>H</td>
+			<td>G</td>
+			<td>F</td>
+			<td>E</td>
+			<td>D</td>
+			<td>C</td>
+			<td>B</td>
+			<td>A</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>8</td>
+		</tr>
+
+		<tr>
+			<td>2</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>7</td>
+		</tr>
+
+		<tr>
+			<td>3</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>
+				<div></div>
+			</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>6</td>
+		</tr>
+
+		<tr>
+			<td>4</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>5</td>
+		</tr>
+
+		<tr>
+			<td>5</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>4</td>
+		</tr>
+
+		<tr>
+			<td>6</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>7</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>2</td>
+		</tr>
+
+		<tr>
+			<td>8</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>1</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>A</td>
+			<td>B</td>
+			<td>C</td>
+			<td>D</td>
+			<td>E</td>
+			<td>F</td>
+			<td>G</td>
+			<td>H</td>
+			<td></td>
+		</tr>
+
+		
+		</table>
+	</body>
+</html>
