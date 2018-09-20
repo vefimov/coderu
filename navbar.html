@@ -1,149 +1,186 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>New product</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-          crossorigin="anonymous"></script>
-  <style>
-    html, body {
-      height: 100%;
-    }
-    header {
-      padding: 10px;
-      height: 40px;
-      text-align: center;
-      margin-bottom: 100px;
-    }
-.header img{
-  margin-top: 10px;
-}
-   .content{
-     text-align: center;
-     padding-bottom: 30px;
-   }
-    .form{
-      background-color: darkgrey;
-      padding-top: 20px;
-      width: 600px;
-      height: 200px;
-      margin-left: 200px;
-    }
-   .navbar-right{
-     margin-right: 100px;
-     padding-right: 50px;
-     padding-top: 30px;
-     font-size: 20px;
-     width: 200px;
-   }
-   .navbar-right li{
-     text-align: center;
-     border: 1px solid grey;
-     padding-left: 15px;
-     border-radius: 3px;
-   }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New product</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style>
+        html, body {
+            height: 100%;
+        }
 
-   .row image{
-     text-align: center;
+        header {
+            padding: 10px;
+            height: 40px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
 
-   }
-   .btn{
-     align-content: center;
-   }
+        .header img {
+            margin-top: 10px;
+        }
 
-    footer {
-      padding: 2px;
-      text-align: center;
-      color: black;
-    }
-  </style>
+        .content {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .form {
+            background-color: darkgrey;
+            padding-top: 20px;
+            width: 600px;
+            height: 200px;
+            margin-left: 200px;
+        }
+
+        .navbar-right {
+            margin-right: 100px;
+            padding-right: 50px;
+            padding-top: 30px;
+            font-size: 20px;
+            width: 200px;
+        }
+
+        .navbar-right li {
+            text-align: center;
+            border: 1px solid grey;
+            padding-left: 15px;
+            border-radius: 3px;
+        }
+
+        .row image {
+            text-align: center;
+
+        }
+
+        .btn {
+            align-content: center;
+        }
+
+        footer {
+            padding: 2px;
+            text-align: center;
+            color: black;
+        }
+
+        .product-categories img {
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+        }
+
+        .side-nav {
+            width: 300px;
+            float: right;
+            border-width: 0 1px 1px;
+            border-style: solid;
+            border-color: grey;
+        }
+
+        .side-nav li {
+            width: 100%;
+            border-top: 1px solid grey;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+        }
+
+        aside {
+            flex: 0 0 300px;
+        }
+
+        aside, article {
+            flex: 1;
+
+        }
+    </style>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="row-header">
-  <div class="text-center">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrPNSHNEFp1Fh2ksp5aAJBNzbpHSU5EeV_dVX1bcvwhMeT1G9FGA" width="200" height="100" alt="logo">
-  </div>
+    <div class="text-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrPNSHNEFp1Fh2ksp5aAJBNzbpHSU5EeV_dVX1bcvwhMeT1G9FGA"
+             width="200" height="100" alt="logo">
+    </div>
 </header>
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Главная</a>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Главная</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li class="drown">
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li class="drown">
-        </li>
-      </ul>
-    </div>
-  </div>
 </nav>
-<aside class="navbar-right">
-  <ul class="list-group">
-    <li><a href="">Кроссовки</a></li>
-    <li><a href="">Рюкзаки</a></li>
-    <li><a href="">Одежда</a></li>
-    <li><a href="">Другое</a></li>
-  </ul>
-</aside>
-<article class="content">
-  <div class="form">
-  <h1>Здесь вы можете приобрести продукцию компании найк</h1>
-  <p><strong>Зайдите что бы больше узнать об акционных предложениях</strong></p><button type="button" class="btn btn-sucess">Войти</button>
-  </div>
-  <div class="row">
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><h1>Кроссовки</h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-D1bDhU7hB5i6ZNopYbfj8LRZ7zDflsEWyDu0wOllnsgdMX2RpA" class="img-responsive">
-      <div class="form-groupe">
-        <div class="text-left">
-          <div class="col-sm-offset-3 col-sm 8">
-            <button type="button" class="btn btn-default">Подробнее</button>
-          </div>
+<div class="main">
+    <aside>
+        <ul class="nav navbar-nav side-nav">
+            <li><a href="">Кроссовки</a></li>
+            <li><a href="">Рюкзаки</a></li>
+            <li><a href="">Одежда</a></li>
+            <li><a href="">Другое</a></li>
+        </ul>
+    </aside>
+    <article>
+        <div class="content container-fluid">
+            <div class="jumbotron">
+                <h1>Здесь вы можете приобрести продукцию компании найк</h1>
+                <p><strong>Зайдите что бы больше узнать об акционных предложениях</strong></p>
+                <a href="" class="btn btn-success">Войти</a>
+            </div>
+            <div class="row product-categories">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><h1>Кроссовки</h1><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-D1bDhU7hB5i6ZNopYbfj8LRZ7zDflsEWyDu0wOllnsgdMX2RpA"
+                >
+                    <div>
+                        <a href="#" class="btn btn-default">Подробнее</a>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><h1>Рюкзаки</h1><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuy93yEZzfw7--R3DRayXg6yzsyBUwwGXU3QiYP3AmayUVvSBF"
+                >
+                    <div>
+                        <a href="#" class="btn btn-default">Подробнее</a>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><h1>Одежда</h1><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKKhcWuD5QAN64ln-DpOSK4VZKQNzaWQn1ge5hPjCEjhiaMutuQ"
+                >
+                    <div>
+                        <a href="#" class="btn btn-default">Подробнее</a>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><h1>Другое</h1><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4tm5sZeTIWrOYRsSW0quVAVNOY1NIMPHX3b305QXTQEt4ymZpg"
+                >
+                    <div>
+                        <a href="#" class="btn btn-default">Подробнее</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><h1>Рюкзаки</h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuy93yEZzfw7--R3DRayXg6yzsyBUwwGXU3QiYP3AmayUVvSBF" class="img-responsive">
-      <div class="form-groupe">
-        <div class="text-left">
-          <div class="col-sm-offset-3 col-sm 8">
-            <button type="button" class="btn btn-default">Подробнее</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><h1>Одежда</h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKKhcWuD5QAN64ln-DpOSK4VZKQNzaWQn1ge5hPjCEjhiaMutuQ" class="img-responsive">
-      <div class="form-groupe">
-        <div class="text-left">
-          <div class="col-sm-offset-3 col-sm 8">
-            <button type="button" class="btn btn-default">Подробнее</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><h1>Другое</h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4tm5sZeTIWrOYRsSW0quVAVNOY1NIMPHX3b305QXTQEt4ymZpg" class="img-responsive">
-      <div class="form-groupe">
-        <div class="text-left">
-          <div class="col-sm-offset-3 col-sm 8">
-            <button type="button" class="btn btn-default">Подробнее</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
+    </article>
 </div>
-<footer class="text">
-  <p>Все права защищены</p>
+<footer>
+    <p>Все права защищены</p>
 </footer>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
