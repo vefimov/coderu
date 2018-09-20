@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>product-list</title>
+</head>
+<style>
+    body{
+        height: 100%;
+    }
+    footer {
+        position: absolute;
+        padding-left: 20px;
+        bottom: 0;
+        width: 90%;
+        height: 30px;
+    }
+    .right-block{
+        display: block;
+        float: right;
+        background-color: white;
+        height: 200px;
+        width: 20%;
+        font-size: 20px ;
+    }
+
+    .right-block li{
+        border: 1px solid grey;
+        padding-left: 15px;
+        border-radius: 3px;
+    }
+    .right-block li:hover{
+        background-color: cornflowerblue;
+        color: white;
+    }
+
+
+    .right-block a{
+        color: black;
+    }
+    .right-block a:hover{
+        background-color: cornflowerblue;
+        color: white;
+    }
+
+    .window{
+        padding-top: 20px;
+        width: 60%;
+        height: 200px;
+        margin-left: 10%;
+        background-color: lightgrey;
+        border-radius: 5px;
+        padding-left: 50px;
+    }
+    .window h1{
+        font-size: 48px;
+    }
+    .window p{
+        font-size: 24px;
+        width: 70%;
+
+    }
+    .window button{
+        color: white;
+        background-color: cornflowerblue;
+        border-radius: 3px;
+        border: none;
+        font-size: 20px;
+        margin-left: 35%;
+    }
+    .window button:hover{
+        color: grey;
+        background-color: blue;
+    }
+    .Netbooks{
+        width: 200px;
+        height: 400px;
+        margin-right: 20%;
+        margin-left: 10%;
+    }
+    .Netbooks button{
+        width: 110%;
+        text-align: center;
+        font-size: 16px;
+        color: black;
+        background-color: white;
+        border: 1px solid gainsboro;
+        border-radius: 4px;
+
+    }
+    .Netbooks button:hover{
+
+        background-color: grey;
+    }
+    .Smartphones{
+        width: 200px;
+        height: 400px;
+    }
+    .Smartphones button{
+        width: 110%;
+        text-align: center;
+        font-size: 16px;
+        color: black;
+        background-color: white;
+        border: 1px solid gainsboro;
+        border-radius: 4px;}
+    .Smartphones button:hover{
+        background-color: grey;
+    }
+</style>
+<body>
+<nav class ="navbar navbar-default">
+    <div class ="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class ="navbar-brand">AkISS INC.</a>
+        </div>
+
+        <div>
+            <ul class = "nav navbar-nav">
+                <li class = "active"><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="window col-xs-12 col-sm-9 col-md-6">
+        <h1><strong>Welcome!</strong></h1>
+        <p>Sign in to take a personal bonus</p>
+        <button>Sign in</button>
+        </div>
+        <div class="right-block col-xs-6 col-sm-3 col-md-3 col-lg-4">
+            <aside>
+                <ul class="list-unstyled">
+                    <li><a href="">Netbooks</a></li>
+                    <li><a href="">TV</a></li>
+                    <li><a href="">Cell-phone</a></li>
+                    <li><a href="">For home</a></li>
+                    <li><a href="">For cars</a></li>
+                </ul>
+            </aside>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+<div class="Netbooks col-xs-12 col-sm-6 col-md-6">
+    <h1>Netbooks</h1>
+    <img src="https://www.notik.ru/img/catalog_img/53948/retinaorig/1_hpomen17w021ur.jpg" alt="netbooks" style="height: 150px; float: left">
+    <button>More...</button>
+</div>
+<div class="Smartphones col-xs-12 col-sm-6 col-md-6">
+    <h1>Smartphones</h1>
+    <img src="https://im0-tub-ua.yandex.net/i?id=491656f37af43dddebfab571d6cf2dcf&n=13" alt="smartphones" style="height: 150px">
+    <button>More...</button>
+</div>
+    </div>
+</div>
+
+
+
+<footer>&copy; 2019 Company Inc.</footer>
+</body>
+</html>
