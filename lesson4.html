@@ -46,44 +46,37 @@
     }
 
     .side-nav {
-        width: 200px;
+        flex: 1 0 200px;
         background-color: lightblue;
-        height: 100%;
-    }
-
-    .content {
-        float: left;
-        width: 600px;
     }
 
     .footer {
         background-color: black;
         color: white;
         height: 50px;
-    }
-
-    .footer .text {
         padding: 10px;
     }
 
     .layout {
-        display: table;
-        width: 100%;
-        height: 100%;
-    }
-
-    .layout-row {
-        display: table-row;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
     }
 
     .navbar-row {
         height: 52px;
     }
+
+    .main {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
 </style>
 
 <body>
     <div class="layout">
-        <header class="layout-row header">
+        <header class="header">
             <div class="text-center">
                 <a href="/lesson4.html">
                     <img src="http://pigment.github.io/fake-logos/logos/large/color/fast-banana.png" alt="Logo">
@@ -91,7 +84,7 @@
             </div>
         </header>
 
-        <div class="layout-row navbar-row">
+        <div class="navbar-row">
             <nav class="navbar main-navigation navbar-default">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -147,7 +140,7 @@
             </nav>
         </div>
 
-        <div class="layout-row main">
+        <div class="main">
             <aside class="side-nav pull-left">
                 <ul class="list-unstyled">
                     <li><a href="">Главная</a></li>
@@ -180,9 +173,7 @@
             </article>
         </div>
 
-        <!--<div class="clearfix"></div>-->
-
-        <footer class="layout-row footer text-center">
+        <footer class="footer text-center">
             <div class="text">
                 Designed and built with all the love in the world by @mdo and @fat. Maintained by the core team with the help of our contributors.
 
