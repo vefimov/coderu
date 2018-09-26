@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Counter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var i;
+		var j;
+		var age;
+			start:
+			while(true){
+
+				age = prompt("How old are you?",'')
+
+				if(age >= 18){
+
+							var question = confirm("Start count?")
+							if(question == 1){
+								counter:for (i=2 ; i <= 1000; i++) {
+								for (j =2; j < i ; j++) {
+    							if (i % j == 0) continue counter;
+    								}
+    							alert(i);
+    								}	 		
+    							}
+    							else{
+    							alert("Hmmmmm...ok")
+    							}
+    				}
+
+    			/*else if( age != int){
+    					alert("Enter the number pls")
+    					continue start; 
+    				}*/
+    				
+    			else{
+    					alert("Sory..but you very young")
+    				}
+    			}
+	</script>
+</body>
+</html>
