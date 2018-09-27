@@ -5,13 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Numbers</title>
+    <title>Recursive function</title>
     <script>
-        var number = prompt('Press number');
-        while (number<1000){
-            number++;
-            alert(number);
+        var x = prompt('Press number');
+        var n = prompt('Press dergee')
+        function pow(x, n) {
+            if (n != 1) {
+                return x * pow(x, n - 1);
+            } else {
+                return x;
+            }
         }
+
+        alert( pow(x, n));
 
     </script>
 </head>
