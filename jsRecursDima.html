@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PowAndFibo</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function pow(x, n) {
+        if (n != 1) {
+            return x * pow(x, n - 1);
+        }
+        return x;
+    }
+
+    console.log(pow(2, 6));
+
+    function fibo(n) {
+        if (n >= 1) {
+            return fibo(n - 1) + fibo(n - 2);
+        }
+        return Math.abs(n);
+    }
+
+    console.log(fibo(9));
+    </script>
+</body>
+
+</html>
