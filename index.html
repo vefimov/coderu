@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title></title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<style>
+    td {
+
+        width: 50px;
+        height: 50px;
+    }
+    tr:nth-child(odd) td:nth-child(even),
+    tr:nth-child(even) td:nth-child(odd) {
+        background-color: black;
+    }
+    .chess{
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: red;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        transition: all 1s ease;
+    }
+
+</style>
+<script>
+
+    var tableDef = [
+        [1,2,3,4,5,6,7,8],
+        [1,2,3,4,5,6,7,8],
+        [1,2,3,4,5,6,7,8],
+        [1,2,3,4,5,6,7,8],
+        [1,2,3,4,5,6,7,8],
+        [1,2,3,4,5,6,7,8],
+        [1,2,3,4,5,6,7,8],
+        [1,2,3,4,5,6,7,8]];
+    $(function () {
+        var tableEl = $('.board');
+        var chess = $('<div />',{class:'chess'});
+        tableDef.forEach(function(cells, tableDefIndex) {
+            var tr = $('<tr />');
+            cells.forEach(function(cell, cellIndex) {
+                var td = $('<td />');
+                if (tableDefIndex === 0 && cellIndex === 0)
+                {td.append(chess)}
+                tr.append(td);
+            });
+            tableEl.append(tr);
+
+            $('td').click(function (event) {
+                var target = $(event.currentTarget);
+                var position = target.position();
+
+                chess.css({
+                    left: position.left + 5,
+                    top: position.top + 5
+                });
+            });
+        });
+    });
+
+
+</script>
+
+<table class="board" border="1" cellpadding="0" cellspacing="0"></table>
+
+
+</body>
+</html>
