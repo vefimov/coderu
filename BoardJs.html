@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BoardJs</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <style>
+    td {
+        width: 50px;
+        height: 50px;
+    }
+
+    tr:nth-child(odd) td:nth-child(even),
+    tr:nth-child(even) td:nth-child(odd) {
+        background-color: black;
+    }
+
+    div {
+
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: red;
+        margin: 0 auto;
+    }
+    </style>
+    <script>
+    var row = new Array(8).join(',').split(',');
+    var tableDef = row.map(function() {
+        return row;
+    });
+
+    $(function() {
+        var tableElement = $('.board');
+        tableDef.forEach(function(celss) {
+            var tr = $('<tr/>');
+
+            celss.forEach(function(cel) {
+
+                var td = $('<td/>')
+
+                tr.append(td);
+            });
+            tableElement.append(tr);
+        });
+
+    });
+
+    $(function(onclick) {
+        $('.figure').animate({
+            left: "+=50",
+            height: "toggle"
+        }, function() {
+
+        });
+
+        $('td').click(function() {
+
+            $(this).append($('.figure').animate({
+                left: "+=50",
+                height: "toggle"
+            }, function() {
+
+            }));
+        });
+    });
+    </script>
+    <table class="board" border="1" cellpadding="0" cellspacing="0">
+        <div class="figure"></div>
+    </table>
+</body>
+
+</html>
