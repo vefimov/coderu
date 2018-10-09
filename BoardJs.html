@@ -16,8 +16,8 @@
 <body>
     <style>
     td {
-        width: 48px;
-        height: 48px;
+        width: 50px;
+        height: 50px;
     }
 
     tr:nth-child(odd) td:nth-child(even),
@@ -26,10 +26,11 @@
     }
 
     div {
+
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background: yellow;
+        background-color: red;
         margin: 0 auto;
     }
     </style>
@@ -39,35 +40,44 @@
         return row;
     });
 
-    jQuery(function() {
-        var tableEl = $('.board');
+    $(function() {
+        var tableElement = $('.board');
+        tableDef.forEach(function(celss) {
+            var tr = $('<tr/>');
 
-        tableDef.forEach(function(cells) {
-            var tr = $('<tr />');
+            celss.forEach(function(cel) {
 
-            cells.forEach(function(cell) {
-                var td = $('<td />');
-                
+                var td = $('<td/>')
 
                 tr.append(td);
             });
-
-            tableEl.append(tr);
+            tableElement.append(tr);
         });
+
     });
 
+    $(function(onclick) {
+        $('.figure').animate({
+            left: "+=50",
+            height: "toggle"
+        }, function() {
 
-    $(function(name) {
-        $("td").click(function() {
-            $(".figure").clone().prependTo("td");
         });
 
+        $('td').click(function() {
+
+            $(this).append($('.figure').animate({
+                left: "+=50",
+                height: "toggle"
+            }, function() {
+
+            }));
+        });
     });
     </script>
     <table class="board" border="1" cellpadding="0" cellspacing="0">
         <div class="figure"></div>
     </table>
-    <button class="btn remove-action">Remove cells</button>
 </body>
 
 </html>
