@@ -12,12 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-td {
-  width: 48px;
-  height: 48px;
-}
-tr:nth-child(odd) td:nth-child(even),
-tr:nth-child(even) td:nth-child(odd) {
-  background-color: black;
-}
