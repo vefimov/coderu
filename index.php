@@ -26,13 +26,14 @@
         border-radius: 50%;
         background-color: red;
         position: absolute;
-        top: 5px;
-        left: 5px;
+        top: 15px;
+        left: 15px;
         transition: all 1s ease;
     }
 
 </style>
 <?php
+/*
 $array = [];
 $array2 = [];
 function cells()
@@ -49,30 +50,41 @@ function row()
         $array2[$j] = "<tr>" . cells();
         echo $array2[$j];
     }
-}
-/*$array = [];
+}*/
+$array = [];
 function board()
 {
     for ($i = 0; $i < 8; $i++) {
-        $array[$i] = "<tr>" . cells();
-        echo $array[$i];
-        function cells(){
-            $array2 = [];
-        for ($j = 0; $j < 8; $j++) {
-            $array2[$j] = "<td>";
-            echo $array2[$j];
+        for ($j = 0; $j <8; $j++) {
+            if ($i == 0 && $j == 0){
+                $array[$i][$j] = "<td><div class='chess'></div></td>";
+                echo $array[$i][$j];
+            }else {
+                $array[$i][$j] = "<td></td>";
+                echo $array[$i][$j];
+            }
         }
-        return $array2;
+        $array[$i] = "<tr>";
+        echo $array[$i];
     }
+}
+/*function board()
+{
+    $array = [];
+    foreach ($array as &$value) {
+        foreach ($value as &$cel) {
+            $cel = "<tr></tr>";
+            echo $cel;
+        }
+        $value = "<td>";
+        echo $value;
     }
 }*/
-
-
 
 ?>
 
 <table class="board" border="1" cellpadding="0" cellspacing="0">
-    <?php row() ?>
+    <?php board() ?>
 </table>
 
 
