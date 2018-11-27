@@ -30,7 +30,6 @@
         left: 15px;
         transition: all 1s ease;
     }
-
 </style>
 <?php
 /*
